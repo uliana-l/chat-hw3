@@ -1,0 +1,42 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  background: #eae7dc;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.spinner{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  background: url('./img/giphy.gif');
+  background-size: 100%;
+}
+
+button { 
+  text-transform: uppercase;
+    outline: 0;
+    background: #ffffff;
+    border: 0;
+    color: #e8594f;
+    border: 1px solid #e8594f;
+    font-size: 14px;
+    padding: 3px;
+    cursor: pointer;
+    margin: 2px;
+    width: 100px;
+}
+
+input {
+
+}

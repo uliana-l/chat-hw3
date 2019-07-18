@@ -1,0 +1,13 @@
+input {
+    height: 30px;
+    width: 50%;
+    margin-left: 10px;
+}
+
+form {
+    width: 100%;
+}
+
+.edit-page {
+    width: 500px;
+}

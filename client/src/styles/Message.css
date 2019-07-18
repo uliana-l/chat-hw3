@@ -1,0 +1,89 @@
+.message-container {
+    height: 100px;
+    width: 49%;
+    padding: 3px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+        "avatar text date"
+        "avatar text    like";
+    grid-template-columns: 100px 1fr max-content;
+    grid-column-gap: 5px;
+    background-color: #ffffff;
+    border: 1px solid #d8c3a5;
+}
+
+.message-container img {
+    height: 100%;
+    grid-area: avatar;
+}
+
+.message-date {
+    grid-area: date;
+    justify-self: right;
+    text-align: right;
+    font-size: 12px;
+}
+
+.message-text {
+    grid-area: text;
+    justify-self: left;
+    font-size: 15px;
+    align-self: center;
+}
+
+.fa-heart {
+    grid-area: like;
+    color: grey;
+    justify-self: right;
+    text-align: right;
+    align-self: flex-end;
+    font-size: 18px;
+}
+
+.message-container .fa-heart:hover {
+    color: #e8594f;
+    cursor: pointer;
+}
+
+.is-liked {
+    color: #e8594f;
+}
+
+.my-message-container {
+    height: 100px;
+    width: 49%;
+    border: 1px solid #e8594f;
+    background: #ffffff;
+    padding: 3px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+        "delete text date"
+        "edit   text like";
+    grid-template-columns: max-content 1fr max-content;
+    grid-column-gap: 5px;
+    float: right;
+}
+
+.fa-times, .fa-cog {
+    color: gray;
+    font-size: 18px;
+    text-align: left;
+    height: fit-content;
+}
+
+.fa-cog {
+    grid-area: edit;
+    align-self: end;
+}
+
+.fa-times {
+    grid-area: delete;
+}
+
+.fa-times:hover, .fa-cog:hover {
+    color: black;
+    cursor: pointer;
+}
+

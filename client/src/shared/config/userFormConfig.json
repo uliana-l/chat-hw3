@@ -1,0 +1,19 @@
+[
+    {
+        "label": "Name",
+        "type": "text",
+        "keyword": "name"
+    }, {
+        "label": "Avatar",
+        "type": "text",
+        "keyword": "avatar"
+    }, {
+        "label": "Email",
+        "type": "email",
+        "keyword": "email"
+    }, {
+        "label": "Password",
+        "type": "password",
+        "keyword": "password"
+    }
+]

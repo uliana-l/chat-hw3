@@ -1,0 +1,8 @@
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA = 'FETCH_DATA';
+export const ADD_MESSAGE = 'ADD_MESSAGE';
+export const DELETE_MESSAGE = 'DELETE_MESSAGE';
+export const EDIT_MESSAGE = 'EDIT_MESSAGE';
+export const FETCH_USER = 'FETCH_USER';
+export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
+export const FETCH_FAILURE = 'FETCH_FAILURE';

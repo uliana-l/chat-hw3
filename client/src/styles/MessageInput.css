@@ -1,0 +1,15 @@
+.message-input form {
+    width: 100%;
+    margin: 20px;
+}
+
+.message-input input {
+    width: 70%;
+    height: 30px;
+}
+
+.message-input button {
+    width: 25%;
+    height: 30px;
+    float: right;
+}

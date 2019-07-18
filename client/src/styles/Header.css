@@ -1,0 +1,9 @@
+.header span {
+    margin: 5px;
+}
+
+.header {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}

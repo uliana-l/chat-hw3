@@ -1,0 +1,1 @@
+export const authHeader = "Bearer " + localStorage.getItem('jwt');
