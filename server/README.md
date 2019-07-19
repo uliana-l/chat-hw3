@@ -1,2 +1,4 @@
-# bsa-19, node js
+```npm i```
+
+```node ./bin/www```
 
