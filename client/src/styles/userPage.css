@@ -8,6 +8,27 @@ form {
     width: 100%;
 }
 
-.edit-page {
+.user-page {
     width: 500px;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    text-align: center;
+}
+
+.users-header {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.userpage-item {
+    width: 500px;
+}
+
+.user-page span:hover {
+    cursor: pointer;
+    color: #e84f4f;
 }

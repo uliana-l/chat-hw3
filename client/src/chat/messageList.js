@@ -27,11 +27,11 @@ export default function MessageList(props) {
 
     const data = props.data;
     return (
-        <div>
+        <div className="message-list">
             {data.map((message, i) => {
                 if (message.user === props.userData.name) return (
-                    <div key={i}>
-                        <MyMessage
+                    <div key={i} className='message-list-item my'>
+                        <MyMessage 
                             data={data[i]}
                             deleteMessage={props.deleteMessage}
                             showPage={props.showPage}
@@ -41,7 +41,7 @@ export default function MessageList(props) {
                     </div>
                 );
                 return (
-                    <div key={i}>
+                    <div key={i} className='message-list-item'>
                         <Message 
                             data={data[i]}
                         />

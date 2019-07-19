@@ -6,7 +6,7 @@ import {authHeader} from '../helpers/header';
 
 export function* fetchMessage(action) {
     try {
-        const message = yield call(axios.get, `${api.url}/message/${action.payload.id}`, {headers: { Authorization: authHeader }});
+        const message = yield call(axios.get, `${api.url}/message/${action.payload.id}`, {headers: {Authorization: authHeader}});
         yield put({ type: FETCH_MESSAGE_SUCCESS, payload: { messageData: message.data } })
     } catch (error) {
         yield put({type: FETCH_MESSAGE_FAILURE, payload: error.message});

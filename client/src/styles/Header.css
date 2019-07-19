@@ -3,7 +3,9 @@
 }
 
 .header {
-    border: 1px solid black;
+    border-bottom: 1px solid #d8c3a5;
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
+    margin: 15px;
 }

@@ -46,10 +46,13 @@ class UserList extends Component {
 		if (this.props.loading) return (<div className="spinner"></div>)
 		if (localStorage.getItem('user') !== '1563292183525') this.props.history.push('/messages');
 		return (
-			<div className="row">
-			<LogoutBttn onLogout={this.onLogout}/>
-			<GoToChat toChat={this.toChat}/>
-				<div className="list-group col-10">
+			<div>
+			<div className='header-buttons'>
+				<LogoutBttn onLogout={this.onLogout}/>
+				<GoToChat toChat={this.toChat}/>
+				<button onClick={this.onAdd}>Add user</button>
+			</div>
+				<div>
 					{
 						this.props.users.map(user => {
 							return (
@@ -65,15 +68,6 @@ class UserList extends Component {
 							);
 						})
 					}
-				</div>
-				<div className="col-2">
-					<button
-						className="btn btn-success"
-						onClick={this.onAdd}
-						style={{ margin: "5px" }}
-					>
-						Add user
-					</button>
 				</div>
 			</div>
 		);

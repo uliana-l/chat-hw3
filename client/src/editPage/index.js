@@ -13,12 +13,10 @@ class EditPage extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.state.id !== nextProps.data.id) {
-            this.setState({
-                value: nextProps.data.message,
-                id: nextProps.data.id
-            })
-        }
+        this.setState({
+            value: nextProps.data.message,
+            id: nextProps.data.id
+        });   
     }
 
     componentDidMount() {

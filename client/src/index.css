@@ -23,20 +23,27 @@ code {
   background-size: 100%;
 }
 
-button { 
+button {
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-size: 11px;
   text-transform: uppercase;
-    outline: 0;
-    background: #ffffff;
-    border: 0;
-    color: #e8594f;
-    border: 1px solid #e8594f;
-    font-size: 14px;
-    padding: 3px;
-    cursor: pointer;
-    margin: 2px;
-    width: 100px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #000000;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
+  border: none;
 }
-
-input {
-
+button:hover {
+  cursor: pointer;
+  background: #e84f4f;
+  box-shadow: 0 15px 20px rgba(214, 93, 93, 0.4);
+  color: white;
 }

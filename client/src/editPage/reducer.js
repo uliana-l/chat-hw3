@@ -1,7 +1,7 @@
 import { FETCH_MESSAGE_SUCCESS, FETCH_MESSAGE_FAILURE, FETCH_MESSAGE } from "./actionTypes";
 
 const initialState = {
-    message: '',
+    message: {},
     loading: false,
     error: ''
 };
@@ -13,7 +13,7 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                message: messageData
+                message: {...messageData}
             };
         }
 

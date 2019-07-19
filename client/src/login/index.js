@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from './actions';
+import '../styles/Login.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -12,6 +13,10 @@ class Login extends React.Component {
     const login = e.target.parentNode.elements[0].value;
     const password = String(e.target.parentNode.elements[1].value);
     this.props.checkData({login, password});
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem('jwt')) this.props.history.push('/users');
   }
 
   componentDidUpdate() {
@@ -27,13 +32,12 @@ class Login extends React.Component {
     if (props.error) return <div>{props.error}</div>
     if (props.loading) return <div className="spinner"></div>
     return (
-      <div className='row'>
-        <div className='col-md-12'>Enter login and password:</div>
-        <form className='col-md-4'>
+      <div className="login">
+        <div>Enter login and password:</div>
+        <form>
           <input type='text' placeholder='login'/>
           <input type='password'placeholder='password'/>
-
-          <button type='button' onClick={this.onClick}>Войти</button>
+          <button type='button' onClick={this.onClick}>Login</button>
         </form>
       </div>
     )

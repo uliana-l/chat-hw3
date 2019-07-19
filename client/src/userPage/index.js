@@ -26,10 +26,10 @@ class UserPage extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.state.id !== nextProps.userData.id && nextProps.match.params.id) {
+        if (nextProps.match.params.id) {
             this.setState({
                 ...nextProps.userData
-            })
+            });
         }
     }
 
@@ -111,11 +111,9 @@ class UserPage extends Component {
         const data = this.state;
 
         return (          
-            <div className="userPage">
+            <div className="user-page">
              <form>
-                <div>
-                    <h5>Add user</h5>
-                </div>
+                <div className='users-header'>Add or edit user</div>
                 <div>
                     {
                         userFormConfig.map((item, index) => this.getInput(data, item, index))

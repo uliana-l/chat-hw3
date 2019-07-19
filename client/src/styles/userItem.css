@@ -1,0 +1,45 @@
+.user-item {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-areas: 
+        "avatar info"
+        "avatar bttn";
+    grid-template-columns: max-content 1fr;
+    justify-content: space-between;
+    background: white;
+    height: 200px;
+    width: 800px;
+}
+
+.user-item button {
+    border: 0.5px solid #e84f4f;
+    border-radius: 45px;
+}
+
+.user-item button:hover {
+    background: white;
+    color: black;
+    box-shadow: none;
+}
+
+.user-item img {
+    grid-area: avatar;
+    height: 100%;
+}
+
+.user-info {
+    grid-area: info;
+    width: max-content;
+    justify-self: right;
+}
+
+.user-buttons {
+    grid-area: bttn;
+    font-size: 30px;
+    width: max-content;
+    justify-self: right;
+}
+
+.header-buttons {
+    text-align: center;
+}

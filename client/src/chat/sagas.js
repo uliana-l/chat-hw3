@@ -7,8 +7,8 @@ import {authHeader} from '../helpers/header';
 
 export function* fetchData() {
 	try {
-		const messages = yield call(axios.get, `${api.url}/message`, {headers: { Authorization: authHeader }});
-		const usersAmount = yield call(axios.get, `${api.url}/user/amount`, {headers: { Authorization: authHeader }});
+		const messages = yield call(axios.get, `${api.url}/message`, {headers: {Authorization: authHeader}});
+		const usersAmount = yield call(axios.get, `${api.url}/user/amount`, {headers: {Authorization: authHeader}});
 		yield put({ type: FETCH_DATA_SUCCESS, payload: { data: messages.data, usersAmount: usersAmount.data.result } });
 	} catch (error) {
 		yield put({type: FETCH_FAILURE, payload: error.message});
@@ -24,7 +24,7 @@ export function* addMessage(action) {
 	const newMessage = { ...action.payload.data };
 
 	try {
-		yield call(axios.post, `${api.url}/message`, newMessage, {headers: { Authorization: authHeader }});
+		yield call(axios.post, `${api.url}/message`, newMessage, {headers: {Authorization: authHeader}});
 		yield put({ type: FETCH_DATA });
 	} catch (error) {
 		yield put({type: FETCH_FAILURE, payload: error.message});
@@ -41,7 +41,7 @@ export function* editMessage(action) {
 	const editedMessage = action.payload.data;
 	
 	try {
-		yield call(axios.put, `${api.url}/message/${id}`, editedMessage, {headers: { Authorization: authHeader }});
+		yield call(axios.put, `${api.url}/message/${id}`, editedMessage, {headers: {Authorization: authHeader}});
 		yield put({ type: FETCH_DATA });
 	} catch (error) {
 		yield put({type: FETCH_FAILURE, payload: error.message});
@@ -55,7 +55,7 @@ function* watchEditMessage() {
 
 export function* deleteMessage(action) {
 	try {
-		yield call(axios.delete, `${api.url}/message/${action.payload.id}`, {headers: { Authorization: authHeader }});
+		yield call(axios.delete, `${api.url}/message/${action.payload.id}`, {headers: {Authorization: authHeader}});
 		yield put({ type: FETCH_DATA })
 	} catch (error) {
 		yield put({type: FETCH_FAILURE, payload: error.message});
@@ -69,7 +69,7 @@ function* watchDeleteMessage() {
 
 export function* fetchUser(action) {
     try {
-		const user = yield call(axios.get, `${api.url}/user/${action.payload.id}`, {headers: { Authorization: authHeader }});
+		const user = yield call(axios.get, `${api.url}/user/${action.payload.id}`, {headers: {Authorization: authHeader}});
         yield put({ type: FETCH_USER_SUCCESS, payload: { userData: user.data } })
     } catch (error) {
 		yield put({type: FETCH_FAILURE, payload: error.message});
