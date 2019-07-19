@@ -1,13 +1,13 @@
 .message-container {
     height: 100px;
-    width: 49%;
+    width: 50%;
     padding: 3px;
     margin: 5px;
     display: grid;
     grid-template-areas: 
         "avatar text date"
         "avatar text    like";
-    grid-template-columns: 100px 55% max-content;
+    grid-template-columns: 100px 55% 1fr;
     grid-column-gap: 5px;
     background-color: #ffffff;
     border: 1px solid #d8c3a5;
